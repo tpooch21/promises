@@ -17,6 +17,7 @@ describe('Promise constructor', function() {
       pluckFirstLineFromFileAsync(__dirname + '/../files/file_to_read.txt')
         .then(function(firstLine) {
           expect(firstLine).to.be.a('string');
+          console.log('Logging firstLine from spec => ', firstLine);
           done();
         })
         .catch(done);
